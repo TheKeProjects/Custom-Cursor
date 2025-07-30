@@ -1,2 +1,2 @@
-1.0.3
-- Problemas con las actualizaciones solucionados
+1.0.4
+- Cambio completo del sistema de actualizaciones
