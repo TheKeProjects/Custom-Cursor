@@ -1,0 +1,23 @@
+Versión 1.0.5 de Custom Cursor
+30/7/25
+- Se ha corregido un problema con los links del sistema de actualizaciones
+
+Versión 1.0.4 de Custom Cursor
+30/7/25
+- Cambio completo del sistema de actualizaciones
+
+Versión 1.0.3 de Custom Cursor
+30/7/25
+- Problemas con las actualizaciones solucionados
+
+Versión 1.0.2 de Custom Cursor
+30/7/25
+- Problemas con las actualizaciones solucionados
+
+Versión 1.0.1 de Custom Cursor
+30/7/25
+- Problemas con las actualizaciones solucionados
+
+Versión 1.0.0 de Custom Cursor
+30/7/25
+- Primera versión de Custom Cursor
