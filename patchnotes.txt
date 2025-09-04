@@ -1,3 +1,7 @@
+Versión 1.0.6 de Custom Cursor
+04/9/25
+- Se ha agregado un tutorial basico
+
 Versión 1.0.5 de Custom Cursor
 30/7/25
 - Se ha corregido un problema con los links del sistema de actualizaciones
