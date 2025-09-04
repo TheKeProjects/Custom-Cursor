@@ -43,6 +43,8 @@ Custom Cursor es un selector de cursores personalizados para Windows que te perm
 Custom Cursor/
 ├── Cursores/          # Carpeta para los sets de cursores personalizados
 │   └── Instaladores   # Archivo de configuración para cada set
+├── Tutorial/          # Carpeta para el Tutorial
+│   └── Tutorial.mp4   # Tutorial Basico
 ├── icon.ico           # Icono de la app
 └── Custom-Cursor.py   # Código Principal
 ```
@@ -56,6 +58,8 @@ Custom Cursor/
 - Python 3.13+
 - Tkinter
 - PyInstaller
+- CV2
+- PyGame
 
 ## 🤝 Contribuir
 
@@ -71,6 +75,7 @@ Si encuentras algún problema, por favor [crea un issue](https://github.com/TheK
 
 | Versión | Características | Estado |
 | :--- | :--- | :--- |
+| 1.0.6 | Se ha agregado un tutorial basico | ✅ Estable |
 | 1.0.5 | Se ha corregido un problema con los links del sistema de actualizaciones | ✅ Estable |
 | 1.0.4 | Cambio completo del sistema de actualizaciones | 🚫 Obsoleta |
 | 1.0.3 | Problemas con las actualizaciones solucionados | 🚫 Obsoleta |
@@ -86,6 +91,6 @@ Si encuentras algún problema, por favor [crea un issue](https://github.com/TheK
 
 [![GitHub stars](https://img.shields.io/github/stars/TheKeProjects/Custom-Cursor?style=social)](https://github.com/TheKeProjects/Custom-Cursor/stargazers)
 
-*Hecho con ❤️ para Sistema 🖱️*
+*Hecho con ❤️ para tu Sistema 🖱️*
 
 </div>
