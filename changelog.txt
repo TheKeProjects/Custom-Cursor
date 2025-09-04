@@ -1,2 +1,2 @@
-1.0.5
-- Se ha corregido un problema con los links del sistema de actualizaciones
+1.0.6
+- Se ha agregado un tutorial basico
