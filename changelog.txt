@@ -1,2 +1,5 @@
-1.0.6
-- Se ha agregado un tutorial basico
+1.0.7
+- Se ha agregado la seccion de cursores de colores
+- Se han agregado los sigientes cursores en Extras: Clear 4.1 Mini, Clear 4.2, Simple
+- Se han creado la seccion Silksong y se ha agregado el sigiente cursor: Hornet
+- Se ha agregado soporte para instalacion multiple de cursores
