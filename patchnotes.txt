@@ -1,9 +1,9 @@
 Versión 1.0.7 de Custom Cursor
 25/9/25
-- Se ha agregado la seccion de cursores de colores
-- Se han agregado los sigientes cursores en Extras: Clear 4.1 Mini, Clear 4.2, Simple
+- Se ha agregado la sección de cursores de colores
+- Se han agregado los siguientes cursores en Extras: Clear 4.1 Mini, Clear 4.2, Simple
 - Se han creado la seccion Silksong y se ha agregado el sigiente cursor: Hornet
-- Se ha agregado soporte para instalacion multiple de cursores
+- Se ha agregado soporte para instalación múltiple de cursores
 
 Versión 1.0.6 de Custom Cursor
 04/9/25
