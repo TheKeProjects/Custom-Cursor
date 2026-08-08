@@ -12,10 +12,6 @@ Versión 2.0.0 de Custom Cursor
 - Fixed a severe UI freeze when opening the preview for schemes with several animated (.ani) cursors. The cause was that every animation frame was first written to a temporary file on disk before loading, which could be very slow (especially with real-time antivirus scanning). Frames are now decoded directly in memory, without touching disk
 - Fixed a compiler warning (CS8600) caused by a variable that could be null without being declared as such
 
-## Others
-- CustomCursor.csproj was updated to follow the same structure as Playtime Speed Launcher.csproj (version/author/product metadata and single-file publish settings for Release)
-- build.bat was rewritten to follow the same simplified structure as build copy.bat, copying the final executable to the versions folder
-
 Versión 1.0.7 de Custom Cursor
 25/9/25
 - Se ha agregado la sección de cursores de colores
