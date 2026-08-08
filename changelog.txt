@@ -1,11 +1,4 @@
-2.0.1
+2.0.2
 
 ## Additions
-- Added more TADC Cursors
-- Added more Utaloid Cursors
-- Added more Vocaloid Cursors
-- Added Umamusume Cursors
-
-## Bugfix
-- Fixed installation of the cursor: Simple
-- Fixed the Hand cursor preview card incorrectly labeled "Link Select" instead of "Handwriting"
+- Added a Sabrina Carpenter Cursor
