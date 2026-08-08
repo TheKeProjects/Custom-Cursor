@@ -35,7 +35,7 @@ namespace CustomCursor.Utilities
             { "busy", "Busy" },
             { "cross", "Precision Select" },
             { "text", "Text Select" },
-            { "hand", "Link Select" },
+            { "hand", "Handwriting" },
             { "unavailiable", "Unavailable" },
             { "vert", "Vertical Resize" },
             { "horz", "Horizontal Resize" },

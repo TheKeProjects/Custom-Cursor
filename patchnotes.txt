@@ -1,4 +1,16 @@
-Versión 2.0.0 de Custom Cursor
+Version 2.0.1 of Custom Cursor
+08/08/26
+## Additions
+- Added more TADC Cursors
+- Added more Utaloid Cursors
+- Added more Vocaloid Cursors
+- Added Umamusume Cursors
+
+## Bugfix
+- Fixed installation of the cursor: Simple
+- Fixed the Hand cursor preview card incorrectly labeled "Link Select" instead of "Handwriting"
+
+Version 2.0.0 of Custom Cursor
 08/08/26
 ## Additions
 - Complete UI redesign with a refined "dark glass" style (panels, cards, and buttons with new consistent tones and translucent borders throughout the app)

@@ -2,7 +2,7 @@ namespace CustomCursor.Services
 {
     public static class AppVersion
     {
-        public const string CURRENT_VERSION = "2.0.0";
+        public const string CURRENT_VERSION = "2.0.1";
 
         public const string GITHUB_OWNER  = "TheKeProjects";
         public const string GITHUB_REPO   = "Custom-Cursor";

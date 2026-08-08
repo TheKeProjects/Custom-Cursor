@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[![Versión](https://img.shields.io/badge/Versión-2.0.0-success)](https://github.com/TheKeProjects/Custom-Cursor/releases/latest/download/CustomCursor.exe)
+[![Versión](https://img.shields.io/badge/Versión-2.0.1-success)](https://github.com/TheKeProjects/Custom-Cursor/releases/latest/download/CustomCursor.exe)
 [![Plataforma](https://img.shields.io/badge/Plataforma-Windows-informational)](https://www.microsoft.com/windows)
 [![Estado](https://img.shields.io/badge/Estado-Activo-brightgreen)](https://github.com/TheKeProjects/Custom-Cursor)
 
@@ -51,6 +51,7 @@ Si encuentras algún problema, por favor [crea un issue](https://github.com/TheK
 
 | Versión | Características | Estado |
 | :--- | :--- | :--- |
+| 2.0.1 | Arreglados errores y agregados nuevos cursores | ✅ Estable |
 | 2.0.0 | Se ha actualizado por completo el código y arreglado errores | ✅ Estable |
 | 1.0.7 | Se han agregado nuevos cursores en (Colores, Extras, Silksong), se ha añadido soporte multi-instalación | 🚫 Obsoleta |
 | 1.0.6 | Se ha agregado un tutorial basico | 🚫 Obsoleta |
