@@ -4,7 +4,7 @@
         Title="Custom Cursor Manager" Height="846" Width="1285"
         WindowStartupLocation="CenterScreen"
         ResizeMode="CanResize"
-        Icon="pack://siteoforigin:,,,/icon.ico"
+        Icon="pack://application:,,,/icon.ico"
         MinHeight="500" MinWidth="800">
 
     <Window.Resources>

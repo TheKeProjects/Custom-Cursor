@@ -21,6 +21,7 @@
     <PublishSingleFile>true</PublishSingleFile>
     <PublishReadyToRun>true</PublishReadyToRun>
     <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
     <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
     <Deterministic>true</Deterministic>
     <PathMap>$(MSBuildProjectDirectory)=.</PathMap>
@@ -28,10 +29,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- Copy icon to output directory -->
-    <Content Include="icon.ico">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <!-- Embed icon as a compiled resource so the WPF Window.Icon (pack://application:,,,/icon.ico)
+         resolves from inside the assembly. It must NOT also be declared as Content: WPF's pack
+         resolver treats a file that's both Content and Resource as an "associated content file"
+         first, which needs Assembly.Location - that's empty in single-file publish and throws. -->
+    <Resource Include="icon.ico" />
 
     <!-- Copy Cursores folder and all contents to output directory -->
     <Content Include="Cursores\**\*.*">
