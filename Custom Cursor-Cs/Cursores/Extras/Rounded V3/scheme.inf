@@ -1,0 +1,52 @@
+[Version]
+signature="$CHICAGO$"
+
+[DefaultInstall]
+CopyFiles = Scheme.Cur, Scheme.Txt
+AddReg    = Scheme.Reg
+
+[DestinationDirs]
+Scheme.Cur = 10,"%CUR_DIR%"
+Scheme.Txt = 10,"%CUR_DIR%"
+
+[Scheme.Reg]
+HKCU,"Control Panel\Cursors\Schemes","%SCHEME_NAME%",,"%10%\%CUR_DIR%\%pointer%,%10%\%CUR_DIR%\%help%,%10%\%CUR_DIR%\%work%,%10%\%CUR_DIR%\%busy%,%10%\%CUR_DIR%\%Cross%,%10%\%CUR_DIR%\%Text%,%10%\%CUR_DIR%\%Hand%,%10%\%CUR_DIR%\%Unavailiable%,%10%\%CUR_DIR%\%Vert%,%10%\%CUR_DIR%\%Horz%,%10%\%CUR_DIR%\%Dgn1%,%10%\%CUR_DIR%\%Dgn2%,%10%\%CUR_DIR%\%move%,%10%\%CUR_DIR%\%alternate%,%10%\%CUR_DIR%\%link%,%10%\%CUR_DIR%\%pin%,%10%\%CUR_DIR%\%person%
+
+; -- Common Information
+
+[Scheme.Cur]
+"Normal.cur"
+"Alternative.cur"
+"Diagonal1.cur"
+"Diagonal2.cur"
+"Horizontal.cur"
+"Link.cur"
+"Move.cur"
+"Presicion.cur"
+"Person.cur"
+"Unavailable.cur"
+"Vertical.cur"
+"Working.ani"
+"Writing.cur"
+
+[Strings]
+CUR_DIR         = "Cursors\Extras\Rounded V3"
+SCHEME_NAME     = "Rounded V3"
+pointer		= "Pointer.cur"
+help		= "Alternative.cur"
+work		= "Working.ani"
+busy		= "Unavailable.cur"
+cross		= "Presicion.cur"
+text		= "Presicion.cur"
+hand		= "Writing.cur"
+unavailiable	= "Unavailable.cur"
+vert		= "Vertical.cur"   
+horz		= "Horizontal.cur"
+dgn1		= "Diagonal1.cur"
+dgn2		= "Diagonal2.cur"
+move		= "Move.cur"
+alternate	= "Alternative.cur"
+link		= "Link.cur"
+pin		= "Person.cur"
+person		= "Person.cur"
+

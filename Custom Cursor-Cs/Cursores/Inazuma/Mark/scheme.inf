@@ -1,0 +1,50 @@
+[Version]
+signature="$CHICAGO$"
+
+[DefaultInstall]
+CopyFiles = Scheme.Cur, Scheme.Txt
+AddReg    = Scheme.Reg
+
+[DestinationDirs]
+Scheme.Cur = 10,"%CUR_DIR%"
+Scheme.Txt = 10,"%CUR_DIR%"
+
+[Scheme.Reg]
+HKCU,"Control Panel\Cursors\Schemes","%SCHEME_NAME%",,"%10%\%CUR_DIR%\%pointer%,%10%\%CUR_DIR%\%help%,%10%\%CUR_DIR%\%work%,%10%\%CUR_DIR%\%busy%,%10%\%CUR_DIR%\%Cross%,%10%\%CUR_DIR%\%Text%,%10%\%CUR_DIR%\%Hand%,%10%\%CUR_DIR%\%Unavailiable%,%10%\%CUR_DIR%\%Vert%,%10%\%CUR_DIR%\%Horz%,%10%\%CUR_DIR%\%Dgn1%,%10%\%CUR_DIR%\%Dgn2%,%10%\%CUR_DIR%\%move%,%10%\%CUR_DIR%\%alternate%,%10%\%CUR_DIR%\%link%,%10%\%CUR_DIR%\%pin%,%10%\%CUR_DIR%\%person%
+
+; -- Common Information
+
+[Scheme.Cur]
+"Normal.ani"
+"Alternative.cur"
+"Busy.ani"
+"Diagonal1.ani"
+"Diagonal2.ani"
+"Help.cur"
+"Horizontal.ani"
+"Link.cur"
+"Move.ani"
+"Presicion.ani"
+"Text.cur"
+"Unavailable.ani"
+"Vertical.ani"
+"Working.ani"
+"Writing.cur"
+"Person.cur"
+"Location.cur"
+
+[Strings]
+CUR_DIR         = "Cursors\Inazuma\Mark Evans"
+SCHEME_NAME     = "Mark Evans"
+pointer		= "Link.cur"
+work		= "Busy.cur"
+text		= "Pointer.cur"
+hand		= "Pointer.cur"
+move		= "Pointer.cur"
+unavailiable	= "Busy.cur"
+vert		= "Pointer.cur"
+horz		= "Pointer.cur"
+dgn1		= "Pointer.cur"
+dgn2		= "Pointer.cur"
+link		= "Pointer.cur"
+person		= "Pointer.cur"

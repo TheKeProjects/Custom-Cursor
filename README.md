@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[![Versión](https://img.shields.io/badge/Versión-1.0.7-success)](https://github.com/TheKeProjects/Custom-Cursor/releases/latest/download/Custom-Cursor_Setup.exe)
+[![Versión](https://img.shields.io/badge/Versión-2.0.0-success)](https://github.com/TheKeProjects/Custom-Cursor/releases/latest/download/CustomCursor.exe)
 [![Plataforma](https://img.shields.io/badge/Plataforma-Windows-informational)](https://www.microsoft.com/windows)
 [![Estado](https://img.shields.io/badge/Estado-Activo-brightgreen)](https://github.com/TheKeProjects/Custom-Cursor)
 
@@ -37,30 +37,6 @@ Custom Cursor es un selector de cursores personalizados para Windows que te perm
 | **2. Visualiza la Previa** | Consulta cómo se verá cada set de cursores antes de aplicarlo |
 | **3. Aplica el Esquema** | Haz clic en "Aplicar" para configurar los cursores en tu sistema |
 
-## 📦 Estructura del proyecto
-
-```
-Custom Cursor/
-├── Cursores/          # Carpeta para los sets de cursores personalizados
-│   └── Instaladores   # Archivo de configuración para cada set
-├── Tutorial/          # Carpeta para el Tutorial
-│   └── Tutorial.mp4   # Tutorial Basico
-├── icon.ico           # Icono de la app
-└── Custom-Cursor.py   # Código Principal
-```
-
-## 🛠️ Desarrollo
-
-### Source Code de Custom Cursor
-[AQUI](https://raw.githubusercontent.com/TheKeProjects/Custom-Cursor/main/CustomCursor.zip) Está el código fuente de Custom Cursor, para que cualquiera pueda hacer sus cambios y mejorar la app
-
-### Prerrequisitos
-- Python 3.13+
-- Tkinter
-- PyInstaller
-- CV2
-- PyGame
-
 ## 🤝 Contribuir
 
 ¡Todas las contribuciones son siempre bienvenidas!  
@@ -75,9 +51,10 @@ Si encuentras algún problema, por favor [crea un issue](https://github.com/TheK
 
 | Versión | Características | Estado |
 | :--- | :--- | :--- |
-| 1.0.7 | Se han agregado nuevos cursores en (Colores, Extras, Silksong), se ha añadido soporte multi-instalación | ✅ Estable |
-| 1.0.6 | Se ha agregado un tutorial basico | ✅ Estable |
-| 1.0.5 | Se ha corregido un problema con los links del sistema de actualizaciones | ✅ Estable |
+| 2.0.0 | Se ha actualizado por completo el código y arreglado errores | ✅ Estable |
+| 1.0.7 | Se han agregado nuevos cursores en (Colores, Extras, Silksong), se ha añadido soporte multi-instalación | 🚫 Obsoleta |
+| 1.0.6 | Se ha agregado un tutorial basico | 🚫 Obsoleta |
+| 1.0.5 | Se ha corregido un problema con los links del sistema de actualizaciones | 🚫 Obsoleta |
 | 1.0.4 | Cambio completo del sistema de actualizaciones | 🚫 Obsoleta |
 | 1.0.3 | Problemas con las actualizaciones solucionados | 🚫 Obsoleta |
 | 1.0.2 | Problemas con las actualizaciones solucionados | 🚫 Obsoleta |

@@ -1,5 +1,17 @@
-1.0.7
-- Se ha agregado la sección de cursores de colores
-- Se han agregado los siguientes cursores en Extras: Clear 4.1 Mini, Clear 4.2, Simple
-- Se han creado la seccion Silksong y se ha agregado el sigiente cursor: Hornet
-- Se ha agregado soporte para instalación múltiple de cursores
+2.0.0
+
+## Additions
+- Complete UI redesign with a refined "dark glass" style (panels, cards, and buttons with new consistent tones and translucent borders throughout the app)
+- The top action bar is now a segmented toolbar (🔄 Update | 📹 Tutorial | ⚙️ Settings) joined into a single pill with dividers and tooltips
+- The Categories sidebar is now a flat list with a left accent bar that highlights the selected category (previously there was no visual indication of the active category)
+- New preview button (👁️) on every cursor scheme card, opening the full preview showing every cursor in the set, both animated (.ani) and static (.cur)
+- "Install Selected" button now uses the same highlighted (gradient) style as "Apply This Cursor Scheme" for stronger visual hierarchy
+- Default window size on launch set to approx. 1285x846
+
+## Bugfix
+- Fixed a severe UI freeze when opening the preview for schemes with several animated (.ani) cursors. The cause was that every animation frame was first written to a temporary file on disk before loading, which could be very slow (especially with real-time antivirus scanning). Frames are now decoded directly in memory, without touching disk
+- Fixed a compiler warning (CS8600) caused by a variable that could be null without being declared as such
+
+## Others
+- CustomCursor.csproj was updated to follow the same structure as Playtime Speed Launcher.csproj (version/author/product metadata and single-file publish settings for Release)
+- build.bat was rewritten to follow the same simplified structure as build copy.bat, copying the final executable to the versions folder
