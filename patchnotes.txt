@@ -1,3 +1,12 @@
+Version 2.1.0 of Custom Cursor
+21/09/26
+## Additions
+- Added a Wii Cursor
+- Added a manual system update
+
+## Bugfix
+- Fixed an error in the installation of the cursors
+
 Version 2.0.2 of Custom Cursor
 08/08/26
 ## Additions

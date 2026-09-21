@@ -1,4 +1,8 @@
-2.0.2
+2.1.0
 
 ## Additions
-- Added a Sabrina Carpenter Cursor
+- Added a Wii Cursor
+- Added a manual system update
+
+## Bugfix
+- Fixed an error in the installation of the cursors

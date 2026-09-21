@@ -102,6 +102,149 @@ namespace CustomCursor.Services
             return updateInfo;
         }
 
+        // Always points at whatever release GitHub currently flags as "latest", so this
+        // never needs a version number baked into it.
+        private const string LatestExeFileName = "CustomCursor.exe";
+        private static string LatestExeUrl
+            => $"https://github.com/{AppVersion.GITHUB_OWNER}/{AppVersion.GITHUB_REPO}/releases/latest/download/{LatestExeFileName}";
+
+        // Manual fallback for when the automatic update path fails or misreports the
+        // installed version as current — always returns the download info for the
+        // latest published release, regardless of the local version comparison.
+        public async Task<UpdateInfo> GetLatestReleaseInfoAsync()
+        {
+            var info = new UpdateInfo();
+
+            // The version label is cosmetic (best effort): the download itself doesn't depend on it.
+            try
+            {
+                var versionUrl    = $"https://raw.githubusercontent.com/{AppVersion.GITHUB_OWNER}/{AppVersion.GITHUB_REPO}/{AppVersion.GITHUB_BRANCH}/version.txt";
+                var latestVersion = (await _httpClient.GetStringAsync(versionUrl))
+                                        .Replace("\r", "").Replace("\n", "").Replace("\t", "").Trim();
+                if (!string.IsNullOrWhiteSpace(latestVersion))
+                    info.LatestVersion = latestVersion;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"[UpdateService] Manual version lookup failed: {ex.Message}");
+            }
+
+            // Only report a download once the release asset is confirmed reachable.
+            try
+            {
+                using var request  = new HttpRequestMessage(HttpMethod.Get, LatestExeUrl);
+                using var response = await _httpClient.SendAsync(request, HttpCompletionOption.ResponseHeadersRead);
+                response.EnsureSuccessStatusCode();
+
+                info.DownloadUrl       = LatestExeUrl;
+                info.FileName          = LatestExeFileName;
+                info.FileSize          = response.Content.Headers.ContentLength ?? 0;
+                info.ReleaseUrl        = $"{AppVersion.GetGitHubRepoUrl()}/releases/latest";
+                info.IsUpdateAvailable = true;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"[UpdateService] Manual release lookup failed: {ex.Message}");
+            }
+
+            return info;
+        }
+
+        // Used only by the manual-update fallback window: downloads the latest .exe straight
+        // from the GitHub release into the folder the app is currently running from, then
+        // closes the app, replaces the old exe with the new one, and relaunches.
+        public async Task<bool> DownloadAndInstallLatestExeAsync(IProgress<int>? progress = null)
+        {
+            string? tempDir     = null;
+            string? stagingPath = null;
+
+            try
+            {
+                // ProcessPath is the real single-file exe. It resolves to dotnet.exe only when
+                // running without an apphost (dev), so fall back to the app folder in that case.
+                var processPath = Environment.ProcessPath;
+                var currentExePath =
+                    !string.IsNullOrEmpty(processPath) &&
+                    !Path.GetFileName(processPath).Equals("dotnet.exe", StringComparison.OrdinalIgnoreCase)
+                        ? processPath
+                        : Path.Combine(AppContext.BaseDirectory, LatestExeFileName);
+
+                var currentDir = Path.GetDirectoryName(currentExePath) ?? AppContext.BaseDirectory;
+                stagingPath    = Path.Combine(currentDir, Path.GetFileNameWithoutExtension(currentExePath) + ".update.exe");
+
+                using (var response = await _httpClient.GetAsync(LatestExeUrl, HttpCompletionOption.ResponseHeadersRead))
+                {
+                    response.EnsureSuccessStatusCode();
+                    var totalBytes = response.Content.Headers.ContentLength ?? 0;
+                    var buffer     = new byte[8192];
+                    var bytesRead  = 0L;
+
+                    using var contentStream = await response.Content.ReadAsStreamAsync();
+                    using var fileStream    = new FileStream(stagingPath, FileMode.Create, FileAccess.Write, FileShare.None, 8192, true);
+
+                    int read;
+                    while ((read = await contentStream.ReadAsync(buffer, 0, buffer.Length)) > 0)
+                    {
+                        await fileStream.WriteAsync(buffer, 0, read);
+                        bytesRead += read;
+                        if (totalBytes > 0)
+                            progress?.Report((int)((bytesRead * 100) / totalBytes));
+                    }
+
+                    // Never swap in a truncated download over a working exe.
+                    if (totalBytes > 0 && bytesRead != totalBytes)
+                        throw new IOException($"Download incomplete ({bytesRead}/{totalBytes} bytes)");
+                }
+
+                tempDir = Path.Combine(Path.GetTempPath(), "CustomCursorManager_Update");
+                if (Directory.Exists(tempDir)) Directory.Delete(tempDir, true);
+                Directory.CreateDirectory(tempDir);
+
+                var batchPath    = Path.Combine(tempDir, "update.bat");
+                var batchContent = $@"@echo off
+chcp 65001 >nul
+timeout /t 2 /nobreak >nul
+set RETRIES=10
+:retry
+move /y ""{stagingPath}"" ""{currentExePath}"" >nul 2>&1
+if not exist ""{stagingPath}"" goto done
+set /a RETRIES-=1
+if %RETRIES% GTR 0 (
+    timeout /t 1 /nobreak >nul
+    goto retry
+)
+del /f /q ""{stagingPath}"" >nul 2>&1
+:done
+start """" ""{currentExePath}""
+rd /s /q ""{tempDir}""
+exit";
+
+                await File.WriteAllTextAsync(batchPath, batchContent);
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName        = "cmd.exe",
+                    Arguments       = $"/c \"{batchPath}\"",
+                    UseShellExecute = true,
+                    WindowStyle     = ProcessWindowStyle.Hidden
+                });
+
+                await Task.Delay(1000);
+                Environment.Exit(0);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"[UpdateService] Manual exe install failed: {ex.Message}");
+                try
+                {
+                    if (stagingPath != null && File.Exists(stagingPath)) File.Delete(stagingPath);
+                    if (tempDir != null && Directory.Exists(tempDir)) Directory.Delete(tempDir, true);
+                }
+                catch { }
+                return false;
+            }
+        }
+
         public async Task<GbUpdateInfo> CheckGameBananaUpdateAsync()
         {
             var info = new GbUpdateInfo();

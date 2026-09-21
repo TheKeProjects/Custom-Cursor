@@ -273,6 +273,12 @@ namespace CustomCursor.Views
                 ShowUpdateCheckView();
         }
 
+        private void ManualUpdateLink_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new ManualUpdateWindow(_updateService) { Owner = this };
+            window.ShowDialog();
+        }
+
         #endregion
 
         private void MainWindow_SizeChanged(object sender, SizeChangedEventArgs e)
@@ -443,13 +449,38 @@ namespace CustomCursor.Views
             }
         }
 
+        // How many cursor roles installing this scheme will actually replace. Uses the same
+        // filename rules as CursorRegistry.ApplyCursorScheme, and requires the file to exist
+        // so a role that would point at a missing file isn't counted.
+        private static int CountChangedCursors(CursorScheme scheme)
+        {
+            int count = 0;
+
+            foreach (string role in Constants.RegistryNames.Keys)
+            {
+                if (!scheme.CursorMap.TryGetValue(role, out string? filename))
+                    continue;
+
+                if (string.IsNullOrWhiteSpace(filename) ||
+                    filename.Contains('$') ||
+                    filename.Contains("..") ||
+                    filename.IndexOfAny(System.IO.Path.GetInvalidFileNameChars()) >= 0)
+                    continue;
+
+                if (File.Exists(System.IO.Path.Combine(scheme.Path, filename)))
+                    count++;
+            }
+
+            return count;
+        }
+
         private UIElement CreateSchemeCard(CursorScheme scheme)
         {
             // Container grid with fixed size
             var containerGrid = new Grid
             {
                 Width = 220,
-                Height = 260,
+                Height = 280,
                 Margin = new Thickness(8),
                 Cursor = System.Windows.Input.Cursors.Hand
             };
@@ -573,6 +604,18 @@ namespace CustomCursor.Views
                 Margin = new Thickness(0, 5, 0, 0)
             };
             infoPanel.Children.Add(pathText);
+
+            int cursorCount = CountChangedCursors(scheme);
+            var countText = new TextBlock
+            {
+                Text = cursorCount == 1 ? "1 cursor" : $"{cursorCount} cursors",
+                FontSize = 11,
+                FontWeight = FontWeights.SemiBold,
+                Foreground = (Brush)FindResource("AccentLightBrush"),
+                ToolTip = "Number of Windows cursors this scheme will change when installed",
+                Margin = new Thickness(0, 4, 0, 0)
+            };
+            infoPanel.Children.Add(countText);
 
             Grid.SetRow(infoPanel, 1);
             grid.Children.Add(infoPanel);

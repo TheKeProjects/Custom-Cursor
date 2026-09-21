@@ -644,6 +644,21 @@
                                     </Grid>
                                 </StackPanel>
                             </Border>
+
+                            <Button x:Name="ManualUpdateLink"
+                                    Background="Transparent" BorderThickness="0"
+                                    HorizontalAlignment="Left"
+                                    Padding="0" Margin="2,14,0,0"
+                                    Cursor="Hand" Click="ManualUpdateLink_Click">
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <ContentPresenter/>
+                                    </ControlTemplate>
+                                </Button.Template>
+                                <TextBlock Text="App not updating? Click here to update manually"
+                                           FontSize="11" Foreground="{StaticResource TextMutedBrush}"
+                                           TextDecorations="Underline"/>
+                            </Button>
                         </StackPanel>
                     </ScrollViewer>
 

@@ -1,0 +1,55 @@
+[Version]
+signature="$CHICAGO$"
+
+[DefaultInstall]
+CopyFiles = Scheme.Cur, Scheme.Txt
+AddReg    = Scheme.Reg
+
+[DestinationDirs]
+Scheme.Cur = 10,"%CUR_DIR%"
+Scheme.Txt = 10,"%CUR_DIR%"
+
+[Scheme.Reg]
+HKCU,"Control Panel\Cursors\Schemes","%SCHEME_NAME%",,"%10%\%CUR_DIR%\%pointer%,%10%\%CUR_DIR%\%help%,%10%\%CUR_DIR%\%work%,%10%\%CUR_DIR%\%busy%,%10%\%CUR_DIR%\%Cross%,%10%\%CUR_DIR%\%Text%,%10%\%CUR_DIR%\%Hand%,%10%\%CUR_DIR%\%Unavailiable%,%10%\%CUR_DIR%\%Vert%,%10%\%CUR_DIR%\%Horz%,%10%\%CUR_DIR%\%Dgn1%,%10%\%CUR_DIR%\%Dgn2%,%10%\%CUR_DIR%\%move%,%10%\%CUR_DIR%\%alternate%,%10%\%CUR_DIR%\%link%,%10%\%CUR_DIR%\%pin%,%10%\%CUR_DIR%\%person%
+
+; -- Common Information
+
+[Scheme.Cur]
+"Normal.ani"
+"Alternative.ani"
+"Busy.ani"
+"Diagonal1.ani"
+"Diagonal2.ani"
+"Help.ani"
+"Horizontal.ani"
+"Link.ani"
+"Move.ani"
+"Presicion.ani"
+"Text.ani"
+"Unavailable.ani"
+"Vertical.ani"
+"Working.ani"
+"Writing.ani"
+"Person.ani"
+"Pin.ani"
+
+[Strings]
+CUR_DIR         = "Cursors\Consolas\Wii"
+SCHEME_NAME     = "Wii"
+pointer		= "Pointer.cur"
+help		= "Help.cur"
+work		= "Working.ani"
+busy		= "Busy.ani"
+cross		= "Presicion.cur"
+text		= "Text.cur"
+hand		= "Writing.cur"
+unavailiable	= "Unavailable.cur"
+vert		= "Vertical.cur"
+horz		= "Horizontal.cur"
+dgn1		= "Diagonal1.cur"
+dgn2		= "Diagonal2.cur"
+move		= "Move.cur"
+alternate	= "Alternative.cur"
+link		= "Link.cur"
+pin		= "Pin.cur"
+person		= "Person.cur"

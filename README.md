@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[![Versión](https://img.shields.io/badge/Versión-2.0.2-success)](https://github.com/TheKeProjects/Custom-Cursor/releases/latest/download/CustomCursor.exe)
+[![Versión](https://img.shields.io/badge/Versión-2.1.0-success)](https://github.com/TheKeProjects/Custom-Cursor/releases/latest/download/CustomCursor.exe)
 [![Plataforma](https://img.shields.io/badge/Plataforma-Windows-informational)](https://www.microsoft.com/windows)
 [![Estado](https://img.shields.io/badge/Estado-Activo-brightgreen)](https://github.com/TheKeProjects/Custom-Cursor)
 

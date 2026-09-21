@@ -197,9 +197,10 @@ namespace CustomCursor.Services
                 {
                     if (key != null)
                     {
-                        // Set the scheme name FIRST
-                        key.SetValue("Scheme Source", 2, RegistryValueKind.DWord);
-                        key.SetValue("Scheme Name", schemeName, RegistryValueKind.String);
+                        // Set the scheme name FIRST, exactly as Control Panel does:
+                        // (Default) holds the name and Source 1 means a user scheme (HKCU\...\Schemes)
+                        key.SetValue("Scheme Source", 1, RegistryValueKind.DWord);
+                        key.SetValue("", schemeName, RegistryValueKind.String);
 
                         // Set individual cursor paths from the scheme string
                         int index = 0;
@@ -302,7 +303,9 @@ namespace CustomCursor.Services
             {
                 using (RegistryKey? key = Registry.CurrentUser.OpenSubKey(Constants.CursorsRegistryPath))
                 {
-                    return key?.GetValue("Scheme Name") as string;
+                    // (Default) is where Windows keeps the active scheme name; "Scheme Name" is
+                    // only what older versions of this app wrote, so use it just when (Default) is unset.
+                    return key?.GetValue("") as string ?? key?.GetValue("Scheme Name") as string;
                 }
             }
             catch
@@ -328,7 +331,7 @@ namespace CustomCursor.Services
                     if (key != null)
                     {
                         key.SetValue("Scheme Source", 0, RegistryValueKind.DWord);
-                        key.SetValue("Scheme Name", "", RegistryValueKind.String);
+                        key.SetValue("", "", RegistryValueKind.String);
 
                         // Set all cursor values to empty (uses Windows defaults)
                         foreach (var kvp in Constants.RegistryNames)
@@ -417,8 +420,8 @@ namespace CustomCursor.Services
                 {
                     if (key != null)
                     {
-                        key.SetValue("Scheme Source", 2, RegistryValueKind.DWord);
-                        key.SetValue("Scheme Name", schemeName, RegistryValueKind.String);
+                        key.SetValue("Scheme Source", 1, RegistryValueKind.DWord);
+                        key.SetValue("", schemeName, RegistryValueKind.String);
 
                         int index = 0;
                         foreach (var kvp in Constants.RegistryNames)

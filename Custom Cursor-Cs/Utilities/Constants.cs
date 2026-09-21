@@ -4,7 +4,10 @@ namespace CustomCursor.Utilities
 {
     public static class Constants
     {
-        // Registry cursor names mapping
+        // Scheme.inf key -> value name under HKCU\Control Panel\Cursors.
+        // Order matters: it is the positional order of the string stored in ...\Schemes.
+        // Windows' own names are not the same as the labels in the Mouse control panel:
+        // "NWPen" is Handwriting and "Hand" is Link Select.
         public static readonly Dictionary<string, string> RegistryNames = new()
         {
             { "pointer", "Arrow" },
@@ -13,7 +16,7 @@ namespace CustomCursor.Utilities
             { "busy", "Wait" },
             { "cross", "Crosshair" },
             { "text", "IBeam" },
-            { "hand", "Hand" },
+            { "hand", "NWPen" },
             { "unavailiable", "No" },
             { "vert", "SizeNS" },
             { "horz", "SizeWE" },
@@ -21,9 +24,9 @@ namespace CustomCursor.Utilities
             { "dgn2", "SizeNESW" },
             { "move", "SizeAll" },
             { "alternate", "UpArrow" },
-            { "link", "Link" },
-            { "pin", "LocationSelect" },
-            { "person", "PersonSelect" }
+            { "link", "Hand" },
+            { "pin", "Pin" },
+            { "person", "Person" }
         };
 
         // User-friendly labels for cursor types
