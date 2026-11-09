@@ -1,0 +1,205 @@
+# English UI texts (key = value, "\n" for line breaks, {0} {1} for arguments).
+# es.txt, fr.txt and it.txt use the same keys; a key they don't have yet shows the English text.
+# Plurals: <key>_one for 1, <key>_many for the rest. Scheme and category names (from the scheme.inf
+# files and the folder names), Windows' cursor value names (Arrow, IBeam...), file names and the
+# app's name stay in English.
+
+# ── Common ──
+ok = OK
+cancel = Cancel
+yes = Yes
+no = No
+dialog_error = Error
+
+# ── Loading screen (LoadingWindow) ──
+loading_initializing = Initializing...
+loading_step_resources = Loading resources...
+loading_step_paths = Initializing path system...
+loading_step_extracting = Extracting resources...
+loading_step_cursors = Loading cursor sets...
+loading_step_ready = Ready!
+loading_step_complete = Complete!
+
+# ── Header ──
+language_title = Language
+language_tooltip = Language
+
+# ── Cursor types (Constants.CursorLabels) ──
+cursor_label_pointer = Normal
+cursor_label_help = Help
+cursor_label_work = Working in Background
+cursor_label_busy = Busy
+cursor_label_cross = Precision Select
+cursor_label_text = Text Select
+cursor_label_hand = Handwriting
+cursor_label_unavailiable = Unavailable
+cursor_label_vert = Vertical Resize
+cursor_label_horz = Horizontal Resize
+cursor_label_dgn1 = Diagonal Resize 1
+cursor_label_dgn2 = Diagonal Resize 2
+cursor_label_move = Move
+cursor_label_alternate = Alternate Select
+cursor_label_link = Link
+cursor_label_pin = Location Select
+cursor_label_person = Person Select
+
+# ── Categories (the left panel) ──
+categories_all = All
+
+# ── Schemes (the right panel and the cards) ──
+schemes_title = Cursor Schemes
+schemes_search = Search schemes...
+schemes_empty = No cursor schemes found in this category
+card_cursors_one = {0} cursor
+card_cursors_many = {0} cursors
+card_cursors_tooltip = Number of Windows cursors this scheme will change when installed
+card_uninstall_tooltip = Uninstall
+card_preview_tooltip = Preview all cursors in this scheme
+card_install_tooltip = Install
+card_select = Select
+no_cursors_title = No Cursors Found
+no_cursors_message = No cursor sets found.\n\nPlease place cursor sets in:\n{0}\n\nEach set must have a scheme.inf file.
+
+# ── Preview ──
+preview_back = Back
+preview_no_data = No cursor data available for preview
+preview_apply = Apply This Scheme
+
+# ── Tutorial ──
+tutorial_none_title = No Tutorials
+tutorial_none_message = No tutorial videos found.\n\nPlace video files (.mp4, .webm, .avi, etc.) in the 'tutorial' folder.
+tutorial_no_file = No video file found!
+tutorial_error_title = Tutorial Error
+tutorial_play_error = Error playing video: {0}
+tutorial_video_failed = the video could not be played.
+tutorial_webview2_missing = the Microsoft Edge WebView2 Runtime is not installed.
+tutorial_loading = Loading video
+
+# ── Actions (apply / uninstall / install selected) ──
+dialog_success = Success
+open_settings_question = Do you want to open Windows cursor settings?
+apply_success = Cursor '{0}' applied successfully!\n\nDo you want to open Windows cursor settings?
+apply_failed = Failed to apply cursor scheme '{0}'\n\n{1}
+uninstall_confirm_title = Confirm Uninstall
+uninstall_confirm = Are you sure you want to uninstall '{0}'?\n\nThis will remove the cursor files from your system.
+uninstall_success = Cursor '{0}' uninstalled successfully!
+uninstall_failed = Failed to uninstall cursor scheme '{0}'\n\n{1}
+replace_active = '{0}' is currently active.
+replace_instruction = Select a cursor to switch to before uninstalling:
+replace_windows_default = Windows Default
+install_confirm_title = Confirm Installation
+install_confirm_one = Install {0} cursor scheme?\n\n{1}\n\nThis may take a few moments.
+install_confirm_many = Install {0} cursor schemes?\n\n{1}\n\nThis may take a few moments.
+install_progress = Installing cursors... ({0}/{1})
+install_complete_title = Installation Complete
+install_partial_title = Installation Partial
+install_all_one = ✅ All {0} cursor scheme installed successfully!
+install_all_many = ✅ All {0} cursor schemes installed successfully!
+install_partial_one = ✅ {0} cursor scheme installed successfully.\n\n❌ {1} failed:\n\n{2}
+install_partial_many = ✅ {0} cursor schemes installed successfully.\n\n❌ {1} failed:\n\n{2}
+install_failed_item = • {0}\n  Error: {1}
+
+# ── Updates ──
+updates_title = Updates
+updates_current_version = Current version
+updates_check_again = Check again
+updates_checking = Checking...
+updates_available = Update available
+updates_available_message = Version {0} is ready to install
+updates_up_to_date = You're up to date
+updates_up_to_date_message = Version {0} is the latest
+updates_check_failed = Couldn't check for updates
+updates_check_failed_message = Check your internet connection and try again
+updates_gb_available = Update available on GameBanana
+updates_details = DETAILS
+updates_file = File
+updates_size = Size
+updates_manual_link = App not updating? Click here to update manually
+updates_whats_new = WHAT'S NEW
+updates_no_changelog = No changelog available.
+updates_update_now = Update Now
+updates_downloading = Downloading... {0}%
+updates_failed_title = Update Failed
+updates_failed_message = The update could not be downloaded or installed. Please try again later or download it manually from GitHub.
+
+# ── Manual update (ManualUpdateWindow) ──
+manual_title = MANUAL UPDATE
+manual_intro = If the app isn't detecting or installing updates on its own, you can force a manual download and reinstall of the latest version here.
+manual_checking = Checking for the latest release...
+manual_the_latest = The latest version
+manual_version = Version v{0}
+manual_ready = {0} is ready to download and install.
+manual_older = Version v{0} is the latest published one, older than this version (v{1}): there's nothing newer to install.
+manual_failed = Couldn't reach the update server. Try again later, or open the download page in your browser instead.
+manual_downloading = Downloading...  {0}%
+manual_download = DOWNLOAD & REPLACE APP
+manual_browser = OPEN DOWNLOAD PAGE IN BROWSER
+
+# ── Navigation and theme ──
+nav_schemes = Schemes
+nav_schemes_tooltip = Your cursor schemes
+nav_tutorial = Tutorial
+nav_tutorial_tooltip = Watch the tutorial
+nav_updates = Updates
+nav_updates_tooltip = Check for Updates
+nav_changelog = Changelog
+nav_changelog_tooltip = What changed in each version
+nav_settings_tooltip = Open Windows cursor settings
+nav_theme_tooltip = Theme
+theme_title = Theme
+theme_default = Default
+theme_classic = Classic
+theme_halloween = Halloween
+theme_summer = Summer
+theme_christmas = Christmas
+theme_lgbtq = LGBTQ+
+
+# ── Schemes page ──
+schemes_subtitle_one = {0} scheme in {1} categories
+schemes_subtitle_many = {0} schemes in {1} categories
+card_apply = Apply
+card_active = ACTIVE
+card_installed = INSTALLED
+selection_count_one = scheme selected
+selection_count_many = schemes selected
+selection_clear = Clear
+selection_install = Install
+
+# ── Tutorial page ──
+tutorial_title = Tutorial
+tutorial_subtitle = How to use Custom Cursor, step by step. Click the video to pause it
+
+# ── Updates page ──
+updates_subtitle = Keep Custom Cursor up to date
+updates_checking_message = Asking the server for the latest version
+
+# ── Changelog ──
+changelog_whats_new = WHAT'S NEW
+changelog_version_history = VERSION HISTORY
+changelog_versions = {0} versions · {1} → {2}
+changelog_versions_one = {0} version · {1} → {2}
+changelog_new_versions = {0} new versions · {1} → {2}
+changelog_latest = LATEST
+changelog_installed = INSTALLED
+changelog_changes = Changes
+changelog_change_one = {0} change
+changelog_change_many = {0} changes
+changelog_section_additions = Additions
+changelog_section_redesigns = Redesigns
+changelog_section_seasonal = Seasonal Themes
+changelog_section_compatibility = Compatibility
+changelog_section_improvements = Improvements
+changelog_section_performance = Performance
+changelog_section_bug_fixes = Bug Fixes
+changelog_section_maintenance = Maintenance
+changelog_section_other = Other
+changelog_section_changes = Changes
+changelogs_title = Changelog
+changelogs_subtitle = Everything that changed, version by version
+changelogs_pill = {0} versions · {1} changes
+changelogs_pill_one = {0} version · {1} changes
+changelogs_glance = AT A GLANCE
+changelogs_versions = Versions
+changelogs_versions_one = Version
+changelogs_changes = Changes
+changelogs_by_type = BY TYPE

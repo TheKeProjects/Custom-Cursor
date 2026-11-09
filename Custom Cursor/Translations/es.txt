@@ -1,0 +1,201 @@
+# Textos de la interfaz en español (las mismas claves que en.txt; una clave que falte muestra el texto en inglés).
+
+# ── Común ──
+ok = Aceptar
+cancel = Cancelar
+yes = Sí
+no = No
+dialog_error = Error
+
+# ── Pantalla de carga ──
+loading_initializing = Iniciando...
+loading_step_resources = Cargando recursos...
+loading_step_paths = Iniciando el sistema de rutas...
+loading_step_extracting = Extrayendo recursos...
+loading_step_cursors = Cargando los conjuntos de cursores...
+loading_step_ready = ¡Listo!
+loading_step_complete = ¡Completado!
+
+# ── Cabecera ──
+language_title = Idioma
+language_tooltip = Idioma
+
+# ── Tipos de cursor ──
+cursor_label_pointer = Normal
+cursor_label_help = Ayuda
+cursor_label_work = Trabajando en segundo plano
+cursor_label_busy = Ocupado
+cursor_label_cross = Selección de precisión
+cursor_label_text = Selección de texto
+cursor_label_hand = Escritura a mano
+cursor_label_unavailiable = No disponible
+cursor_label_vert = Cambiar tamaño vertical
+cursor_label_horz = Cambiar tamaño horizontal
+cursor_label_dgn1 = Cambiar tamaño diagonal 1
+cursor_label_dgn2 = Cambiar tamaño diagonal 2
+cursor_label_move = Mover
+cursor_label_alternate = Selección alternativa
+cursor_label_link = Vínculo
+cursor_label_pin = Selección de ubicación
+cursor_label_person = Selección de persona
+
+# ── Categorías ──
+categories_all = Todas
+
+# ── Esquemas y tarjetas ──
+schemes_title = Esquemas de cursores
+schemes_search = Buscar esquemas...
+schemes_empty = No hay esquemas de cursor en esta categoría
+card_cursors_one = {0} cursor
+card_cursors_many = {0} cursores
+card_cursors_tooltip = Número de cursores de Windows que cambiará este esquema al instalarlo
+card_uninstall_tooltip = Desinstalar
+card_preview_tooltip = Ver todos los cursores de este esquema
+card_install_tooltip = Instalar
+card_select = Seleccionar
+no_cursors_title = No se encontraron cursores
+no_cursors_message = No se encontraron conjuntos de cursores.\n\nColoca los conjuntos de cursores en:\n{0}\n\nCada conjunto debe tener un archivo scheme.inf.
+
+# ── Vista previa ──
+preview_back = Volver
+preview_no_data = No hay datos de cursores para la vista previa
+preview_apply = Aplicar este esquema
+
+# ── Tutorial ──
+tutorial_none_title = No hay tutoriales
+tutorial_none_message = No se encontraron vídeos de tutorial.\n\nColoca archivos de vídeo (.mp4, .webm, .avi, etc.) en la carpeta 'tutorial'.
+tutorial_no_file = ¡No se encontró ningún archivo de vídeo!
+tutorial_error_title = Error del tutorial
+tutorial_play_error = Error al reproducir el vídeo: {0}
+tutorial_video_failed = no se pudo reproducir el vídeo.
+tutorial_webview2_missing = Microsoft Edge WebView2 Runtime no está instalado.
+tutorial_loading = Cargando vídeo
+
+# ── Acciones ──
+dialog_success = Correcto
+open_settings_question = ¿Quieres abrir la configuración de cursores de Windows?
+apply_success = ¡El cursor '{0}' se aplicó correctamente!\n\n¿Quieres abrir la configuración de cursores de Windows?
+apply_failed = No se pudo aplicar el esquema de cursor '{0}'\n\n{1}
+uninstall_confirm_title = Confirmar desinstalación
+uninstall_confirm = ¿Seguro que quieres desinstalar '{0}'?\n\nSe eliminarán los archivos del cursor de tu sistema.
+uninstall_success = ¡El cursor '{0}' se desinstaló correctamente!
+uninstall_failed = No se pudo desinstalar el esquema de cursor '{0}'\n\n{1}
+replace_active = '{0}' está activo ahora mismo.
+replace_instruction = Elige el cursor que se usará antes de desinstalarlo:
+replace_windows_default = Predeterminado de Windows
+install_confirm_title = Confirmar instalación
+install_confirm_one = ¿Instalar {0} esquema de cursor?\n\n{1}\n\nPuede tardar unos momentos.
+install_confirm_many = ¿Instalar {0} esquemas de cursor?\n\n{1}\n\nPuede tardar unos momentos.
+install_progress = Instalando cursores... ({0}/{1})
+install_complete_title = Instalación completada
+install_partial_title = Instalación parcial
+install_all_one = ✅ ¡Se instaló correctamente {0} esquema de cursor!
+install_all_many = ✅ ¡Se instalaron correctamente los {0} esquemas de cursor!
+install_partial_one = ✅ {0} esquema de cursor instalado correctamente.\n\n❌ {1} con errores:\n\n{2}
+install_partial_many = ✅ {0} esquemas de cursor instalados correctamente.\n\n❌ {1} con errores:\n\n{2}
+install_failed_item = • {0}\n  Error: {1}
+
+# ── Actualizaciones ──
+updates_title = Actualizaciones
+updates_current_version = Versión actual
+updates_check_again = Volver a buscar
+updates_checking = Comprobando...
+updates_available = Actualización disponible
+updates_available_message = La versión {0} está lista para instalar
+updates_up_to_date = Tienes la última versión
+updates_up_to_date_message = La versión {0} es la más reciente
+updates_check_failed = No se pudieron buscar actualizaciones
+updates_check_failed_message = Revisa tu conexión a Internet e inténtalo de nuevo
+updates_gb_available = Actualización disponible en GameBanana
+updates_details = DETALLES
+updates_file = Archivo
+updates_size = Tamaño
+updates_manual_link = ¿La app no se actualiza? Haz clic aquí para actualizar manualmente
+updates_whats_new = NOVEDADES
+updates_no_changelog = No hay registro de cambios.
+updates_update_now = Actualizar ahora
+updates_downloading = Descargando... {0}%
+updates_failed_title = Error al actualizar
+updates_failed_message = No se pudo descargar o instalar la actualización. Inténtalo más tarde o descárgala manualmente desde GitHub.
+
+# ── Actualización manual ──
+manual_title = ACTUALIZACIÓN MANUAL
+manual_intro = Si la app no detecta o no instala las actualizaciones por sí sola, aquí puedes forzar la descarga y reinstalación manual de la última versión.
+manual_checking = Buscando la última versión publicada...
+manual_the_latest = La última versión
+manual_version = La versión v{0}
+manual_ready = {0} está lista para descargar e instalar.
+manual_older = La versión publicada más reciente es la v{0}, más antigua que esta (v{1}): no hay nada más nuevo que instalar.
+manual_failed = No se pudo conectar con el servidor de actualizaciones. Inténtalo más tarde o abre la página de descarga en tu navegador.
+manual_downloading = Descargando...  {0}%
+manual_download = DESCARGAR Y REEMPLAZAR LA APP
+manual_browser = ABRIR LA DESCARGA EN EL NAVEGADOR
+
+# ── Navigation and theme ──
+nav_schemes = Esquemas
+nav_schemes_tooltip = Tus esquemas de cursores
+nav_tutorial = Tutorial
+nav_tutorial_tooltip = Ver el tutorial
+nav_updates = Actualizar
+nav_updates_tooltip = Buscar actualizaciones
+nav_changelog = Novedades
+nav_changelog_tooltip = Qué cambió en cada versión
+nav_settings_tooltip = Abrir los ajustes de cursor de Windows
+nav_theme_tooltip = Tema
+theme_title = Tema
+theme_default = Predeterminado
+theme_classic = Clásico
+theme_halloween = Halloween
+theme_summer = Verano
+theme_christmas = Navidad
+theme_lgbtq = LGBTQ+
+
+# ── Schemes page ──
+schemes_subtitle_one = {0} esquema en {1} categorías
+schemes_subtitle_many = {0} esquemas en {1} categorías
+card_apply = Aplicar
+card_active = ACTIVO
+card_installed = INSTALADO
+selection_count_one = esquema seleccionado
+selection_count_many = esquemas seleccionados
+selection_clear = Limpiar
+selection_install = Instalar
+
+# ── Tutorial page ──
+tutorial_title = Tutorial
+tutorial_subtitle = Cómo usar Custom Cursor, paso a paso. Haz clic en el vídeo para pausarlo
+
+# ── Updates page ──
+updates_subtitle = Mantén Custom Cursor al día
+updates_checking_message = Preguntando al servidor por la última versión
+
+# ── Changelog ──
+changelog_whats_new = NOVEDADES
+changelog_version_history = HISTORIAL DE VERSIONES
+changelog_versions = {0} versiones · {1} → {2}
+changelog_versions_one = {0} versión · {1} → {2}
+changelog_new_versions = {0} versiones nuevas · {1} → {2}
+changelog_latest = ÚLTIMA
+changelog_installed = INSTALADA
+changelog_changes = Cambios
+changelog_change_one = {0} cambio
+changelog_change_many = {0} cambios
+changelog_section_additions = Añadidos
+changelog_section_redesigns = Rediseños
+changelog_section_seasonal = Temas de temporada
+changelog_section_compatibility = Compatibilidad
+changelog_section_improvements = Mejoras
+changelog_section_performance = Rendimiento
+changelog_section_bug_fixes = Correcciones
+changelog_section_maintenance = Mantenimiento
+changelog_section_other = Otros
+changelog_section_changes = Cambios
+changelogs_title = Novedades
+changelogs_subtitle = Todo lo que ha cambiado, versión a versión
+changelogs_pill = {0} versiones · {1} cambios
+changelogs_pill_one = {0} versión · {1} cambios
+changelogs_glance = DE UN VISTAZO
+changelogs_versions = Versiones
+changelogs_versions_one = Versión
+changelogs_changes = Cambios
+changelogs_by_type = POR TIPO

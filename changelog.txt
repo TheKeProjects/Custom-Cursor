@@ -1,8 +1,94 @@
-2.1.0
+3.0.0 | 09/11/26
+## Redesigns
+- New look: a side bar with animated navigation, banners and redrawn menus
+- Scheme cards: animated cursor on a glowing stage, active and installed badges
+- Categories are now chips with their counts, the highlight sliding between them
+- Preview: a big stage for any cursor of the scheme, click a card to see it there
+- Selecting schemes brings up a bar to install them all or clear the selection
+- Updates and Changelog are pages of their own
+- New logo: Clicky
+## Seasonal Themes
+- Halloween, Summer, Christmas and LGBTQ+ themes: colours, scenery, particles and logo
+- Default theme: follows the season of the current release
+## Additions
+- Languages: English, Spanish, French and Italian
+- The search box finds schemes by name or folder
+- Animated previews for the schemes with a GIF
+- Installing several schemes shows real progress and each scheme's own result
+## Performance
+- Long operations no longer freeze the window
+## Bug Fixes
+- Offline, the updates page says it couldn't check instead of "You're up to date"
+- The manual update no longer installs an older version over a newer one
+- Schemes with accents or other alphabets in their name no longer overwrite each other
+- Uninstalling can no longer remove Windows' own cursors
+- Approving the admin prompt with another account changes your cursors, not that account's
+- Cancelling the admin prompt no longer leaves a temporary file behind
+- Animated cursors with an odd-sized frame no longer lose the following frames
 
+2.1.0 | 21/09/26
 ## Additions
 - Added a Wii Cursor
 - Added a manual system update
-
-## Bugfix
+## Bug Fixes
 - Fixed an error in the installation of the cursors
+
+2.0.2 | 08/08/26
+## Additions
+- Added a Sabrina Carpenter Cursor
+
+2.0.1 | 08/08/26
+## Additions
+- Added more TADC Cursors
+- Added more Utaloid Cursors
+- Added more Vocaloid Cursors
+- Added Umamusume Cursors
+## Bug Fixes
+- Fixed installation of the cursor: Simple
+- Fixed the Hand cursor preview card incorrectly labeled "Link Select" instead of "Handwriting"
+
+2.0.0 | 08/08/26
+## Redesigns
+- Complete UI redesign with a refined "dark glass" style
+- The top action bar is now a segmented toolbar
+- The Categories sidebar is now a flat list with an accent bar on the selected category
+- "Install Selected" now uses the same highlighted style as "Apply This Cursor Scheme"
+## Additions
+- New preview button on every scheme card, showing every cursor in the set, animated or static
+## Bug Fixes
+- Fixed a severe UI freeze when opening the preview of schemes with several animated cursors
+
+1.0.7 | 25/09/25
+## Additions
+- Added the Colores section
+- Added to Extras: Clear 4.1 Mini, Clear 4.2 and Simple
+- Added the Silksong section with the Hornet cursor
+- Added support for installing several cursors at once
+
+1.0.6 | 04/09/25
+## Additions
+- Added a basic tutorial
+
+1.0.5 | 30/07/25
+## Bug Fixes
+- Fixed a problem with the links of the update system
+
+1.0.4 | 30/07/25
+## Improvements
+- Completely new update system
+
+1.0.3 | 30/07/25
+## Bug Fixes
+- Fixed problems with the updates
+
+1.0.2 | 30/07/25
+## Bug Fixes
+- Fixed problems with the updates
+
+1.0.1 | 30/07/25
+## Bug Fixes
+- Fixed problems with the updates
+
+1.0.0 | 30/07/25
+## Additions
+- First version of Custom Cursor

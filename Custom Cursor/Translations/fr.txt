@@ -1,0 +1,201 @@
+# Textes de l'interface en français (les mêmes clés que en.txt ; une clé absente affiche le texte anglais).
+
+# ── Commun ──
+ok = OK
+cancel = Annuler
+yes = Oui
+no = Non
+dialog_error = Erreur
+
+# ── Écran de chargement ──
+loading_initializing = Initialisation...
+loading_step_resources = Chargement des ressources...
+loading_step_paths = Initialisation du système de chemins...
+loading_step_extracting = Extraction des ressources...
+loading_step_cursors = Chargement des jeux de curseurs...
+loading_step_ready = Prêt !
+loading_step_complete = Terminé !
+
+# ── En-tête ──
+language_title = Langue
+language_tooltip = Langue
+
+# ── Types de curseur ──
+cursor_label_pointer = Normal
+cursor_label_help = Aide
+cursor_label_work = Travail en arrière-plan
+cursor_label_busy = Occupé
+cursor_label_cross = Sélection de précision
+cursor_label_text = Sélection de texte
+cursor_label_hand = Écriture manuscrite
+cursor_label_unavailiable = Non disponible
+cursor_label_vert = Redimensionnement vertical
+cursor_label_horz = Redimensionnement horizontal
+cursor_label_dgn1 = Redimensionnement diagonal 1
+cursor_label_dgn2 = Redimensionnement diagonal 2
+cursor_label_move = Déplacer
+cursor_label_alternate = Sélection alternative
+cursor_label_link = Lien
+cursor_label_pin = Sélection d'emplacement
+cursor_label_person = Sélection de personne
+
+# ── Catégories ──
+categories_all = Toutes
+
+# ── Thèmes et cartes ──
+schemes_title = Thèmes de curseurs
+schemes_search = Rechercher des thèmes...
+schemes_empty = Aucun thème de curseurs dans cette catégorie
+card_cursors_one = {0} curseur
+card_cursors_many = {0} curseurs
+card_cursors_tooltip = Nombre de curseurs Windows que ce thème remplacera une fois installé
+card_uninstall_tooltip = Désinstaller
+card_preview_tooltip = Voir tous les curseurs de ce thème
+card_install_tooltip = Installer
+card_select = Sélectionner
+no_cursors_title = Aucun curseur trouvé
+no_cursors_message = Aucun jeu de curseurs trouvé.\n\nPlacez les jeux de curseurs dans :\n{0}\n\nChaque jeu doit contenir un fichier scheme.inf.
+
+# ── Aperçu ──
+preview_back = Retour
+preview_no_data = Aucune donnée de curseur à afficher
+preview_apply = Appliquer ce thème
+
+# ── Tutoriel ──
+tutorial_none_title = Aucun tutoriel
+tutorial_none_message = Aucune vidéo de tutoriel trouvée.\n\nPlacez des fichiers vidéo (.mp4, .webm, .avi, etc.) dans le dossier 'tutorial'.
+tutorial_no_file = Aucun fichier vidéo trouvé !
+tutorial_error_title = Erreur du tutoriel
+tutorial_play_error = Erreur de lecture de la vidéo : {0}
+tutorial_video_failed = la vidéo n'a pas pu être lue.
+tutorial_webview2_missing = Microsoft Edge WebView2 Runtime n'est pas installé.
+tutorial_loading = Chargement de la vidéo
+
+# ── Actions ──
+dialog_success = Succès
+open_settings_question = Voulez-vous ouvrir les paramètres des curseurs de Windows ?
+apply_success = Le curseur '{0}' a été appliqué !\n\nVoulez-vous ouvrir les paramètres des curseurs de Windows ?
+apply_failed = Impossible d'appliquer le thème de curseurs '{0}'\n\n{1}
+uninstall_confirm_title = Confirmer la désinstallation
+uninstall_confirm = Voulez-vous vraiment désinstaller '{0}' ?\n\nLes fichiers du curseur seront supprimés de votre système.
+uninstall_success = Le curseur '{0}' a été désinstallé !
+uninstall_failed = Impossible de désinstaller le thème de curseurs '{0}'\n\n{1}
+replace_active = '{0}' est actuellement actif.
+replace_instruction = Choisissez le curseur à utiliser avant la désinstallation :
+replace_windows_default = Par défaut de Windows
+install_confirm_title = Confirmer l'installation
+install_confirm_one = Installer {0} thème de curseurs ?\n\n{1}\n\nCela peut prendre quelques instants.
+install_confirm_many = Installer {0} thèmes de curseurs ?\n\n{1}\n\nCela peut prendre quelques instants.
+install_progress = Installation des curseurs... ({0}/{1})
+install_complete_title = Installation terminée
+install_partial_title = Installation partielle
+install_all_one = ✅ {0} thème de curseurs installé avec succès !
+install_all_many = ✅ Les {0} thèmes de curseurs ont été installés avec succès !
+install_partial_one = ✅ {0} thème de curseurs installé avec succès.\n\n❌ {1} en échec :\n\n{2}
+install_partial_many = ✅ {0} thèmes de curseurs installés avec succès.\n\n❌ {1} en échec :\n\n{2}
+install_failed_item = • {0}\n  Erreur : {1}
+
+# ── Mises à jour ──
+updates_title = Mises à jour
+updates_current_version = Version actuelle
+updates_check_again = Vérifier à nouveau
+updates_checking = Vérification...
+updates_available = Mise à jour disponible
+updates_available_message = La version {0} est prête à être installée
+updates_up_to_date = Vous êtes à jour
+updates_up_to_date_message = La version {0} est la plus récente
+updates_check_failed = Impossible de rechercher des mises à jour
+updates_check_failed_message = Vérifiez votre connexion Internet et réessayez
+updates_gb_available = Mise à jour disponible sur GameBanana
+updates_details = DÉTAILS
+updates_file = Fichier
+updates_size = Taille
+updates_manual_link = L'app ne se met pas à jour ? Cliquez ici pour la mettre à jour manuellement
+updates_whats_new = NOUVEAUTÉS
+updates_no_changelog = Aucun journal des modifications disponible.
+updates_update_now = Mettre à jour
+updates_downloading = Téléchargement... {0} %
+updates_failed_title = Échec de la mise à jour
+updates_failed_message = La mise à jour n'a pas pu être téléchargée ou installée. Réessayez plus tard ou téléchargez-la manuellement depuis GitHub.
+
+# ── Mise à jour manuelle ──
+manual_title = MISE À JOUR MANUELLE
+manual_intro = Si l'app ne détecte pas ou n'installe pas les mises à jour d'elle-même, vous pouvez forcer ici le téléchargement et la réinstallation manuels de la dernière version.
+manual_checking = Recherche de la dernière version publiée...
+manual_the_latest = La dernière version
+manual_version = La version v{0}
+manual_ready = {0} est prête à être téléchargée et installée.
+manual_older = La dernière version publiée est la v{0}, plus ancienne que celle-ci (v{1}) : il n'y a rien de plus récent à installer.
+manual_failed = Impossible de joindre le serveur de mises à jour. Réessayez plus tard ou ouvrez la page de téléchargement dans votre navigateur.
+manual_downloading = Téléchargement...  {0} %
+manual_download = TÉLÉCHARGER ET REMPLACER L'APP
+manual_browser = OUVRIR DANS LE NAVIGATEUR
+
+# ── Navigation and theme ──
+nav_schemes = Thèmes
+nav_schemes_tooltip = Vos thèmes de curseurs
+nav_tutorial = Tutoriel
+nav_tutorial_tooltip = Voir le tutoriel
+nav_updates = Mises à jour
+nav_updates_tooltip = Rechercher des mises à jour
+nav_changelog = Nouveautés
+nav_changelog_tooltip = Ce qui a changé dans chaque version
+nav_settings_tooltip = Ouvrir les paramètres de curseur de Windows
+nav_theme_tooltip = Apparence
+theme_title = Apparence
+theme_default = Par défaut
+theme_classic = Classique
+theme_halloween = Halloween
+theme_summer = Été
+theme_christmas = Noël
+theme_lgbtq = LGBTQ+
+
+# ── Schemes page ──
+schemes_subtitle_one = {0} thème dans {1} catégories
+schemes_subtitle_many = {0} thèmes dans {1} catégories
+card_apply = Appliquer
+card_active = ACTIF
+card_installed = INSTALLÉ
+selection_count_one = thème sélectionné
+selection_count_many = thèmes sélectionnés
+selection_clear = Effacer
+selection_install = Installer
+
+# ── Tutorial page ──
+tutorial_title = Tutoriel
+tutorial_subtitle = Comment utiliser Custom Cursor, étape par étape. Cliquez sur la vidéo pour la mettre en pause
+
+# ── Updates page ──
+updates_subtitle = Gardez Custom Cursor à jour
+updates_checking_message = Demande de la dernière version au serveur
+
+# ── Changelog ──
+changelog_whats_new = NOUVEAUTÉS
+changelog_version_history = HISTORIQUE DES VERSIONS
+changelog_versions = {0} versions · {1} → {2}
+changelog_versions_one = {0} version · {1} → {2}
+changelog_new_versions = {0} nouvelles versions · {1} → {2}
+changelog_latest = DERNIÈRE
+changelog_installed = INSTALLÉE
+changelog_changes = Changements
+changelog_change_one = {0} changement
+changelog_change_many = {0} changements
+changelog_section_additions = Ajouts
+changelog_section_redesigns = Refontes
+changelog_section_seasonal = Thèmes saisonniers
+changelog_section_compatibility = Compatibilité
+changelog_section_improvements = Améliorations
+changelog_section_performance = Performances
+changelog_section_bug_fixes = Corrections
+changelog_section_maintenance = Maintenance
+changelog_section_other = Autres
+changelog_section_changes = Changements
+changelogs_title = Nouveautés
+changelogs_subtitle = Tout ce qui a changé, version par version
+changelogs_pill = {0} versions · {1} changements
+changelogs_pill_one = {0} version · {1} changements
+changelogs_glance = EN UN COUP D'ŒIL
+changelogs_versions = Versions
+changelogs_versions_one = Version
+changelogs_changes = Changements
+changelogs_by_type = PAR TYPE
